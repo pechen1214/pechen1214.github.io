@@ -1,0 +1,90 @@
+body{
+    background-color: hsl(0, 0%, 99%);
+    font-family: Verdana;
+    margin-left:220px;
+    margin-right: 220px;
+}
+main {
+    display: grid;
+    grid-template-columns: 400px auto;
+    grid-template-rows:636px auto;
+    grid-gap: 30px;
+    grid-template-areas:
+    "P T"
+    "C T";
+}
+.avatar {
+    grid-area: P;
+    text-align: center; 
+}
+.avatar img {
+    width: 400px;   
+}
+.text {
+    grid-area: T;
+    text-align: left; 
+    color: #023b85;
+    font-family: Verdana
+}
+.text h1 {
+    text-align: left;
+    font-size: 30px;
+}
+.text h2 {
+    text-align: left;
+    font-size: 25px;
+}
+.text h3 {
+    text-align: center;
+    font-size: 18px;
+}
+.text h4 {
+    text-align: left;
+    padding-left: 30px;
+    font-size: 15px;
+}
+.info {
+    grid-area: C;
+    background-color: #023b85;
+    text-align: left ; 
+    color: #ffffff;
+    font-family: Verdana;
+}
+.info h3 {
+    text-align: center;
+}
+.info ul {
+    list-style-type: none;
+}
+.info li {
+    margin-bottom: 5px;
+}
+.info img {
+    height: 22px;   
+}
+.skills {
+    display:flex;
+    flex-wrap:wrap;
+}
+.skill {
+    width:50%;
+}
+.work{
+    padding:20px;  
+}
+.work th{
+    padding: 5px 5px ; 
+    text-align: center; 
+}
+.work td{
+    padding: 8px 8px 8px 8px;  
+}
+.education {
+    padding:20px; 
+}
+.education td{
+    padding: 8px 8px 8px 8px; 
+}
+.line {
+    border-bottom: 3px solid #023b85 ;
+}
