@@ -1,11 +1,16 @@
 body{
+    /*все цвета в вебе обычно в hex формате, т.е. #FCFCFC в данном случае*/
     background-color: hsl(0, 0%, 99%);
     font-family: Verdana;
+
+    /*такое делается через margin: 0 auto чтобы выровнять контент по центру*/
     margin-left:220px;
     margin-right: 220px;
 }
 main {
     display: grid;
+
+    /*идея хорошая, но на маленьких в ширину экранах не влезет и будет горизонтальный скролл*/
     grid-template-columns: 400px auto;
     grid-template-rows:636px auto;
     grid-gap: 30px;
@@ -26,6 +31,9 @@ main {
     color: #023b85;
     font-family: Verdana
 }
+
+/*можно сделать лучше если разобраться с БЭМ, ошибки особой нет,
+ но использован каскад там где не нужен + использован тег вместо класса, что будет проблемой в больших проектах*/
 .text h1 {
     text-align: left;
     font-size: 30px;
