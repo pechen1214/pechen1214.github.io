@@ -1,39 +1,35 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="ru">
+
 <head>
-<!--    отсутствует адаптивный meta, ссылка в issues.txt-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/ee4bf7f9e2.js" crossorigin="anonymous"></script>
     <title>Резюме</title>
 </head>
+
 <body>
     <main>
         <div class="avatar">
-<!--            по хорошему должен быть alt атрибут и размеры-->
-            <img src="avatar.jpg"/>
+            <img class="avatar__aythor" src="avatar.jpg" alt="Photo Kapustin Andrei" />
         </div>
-        <div class="text">
-<!--            h1,h2 неверно реализовано, ты сделал так из-за стилизации, с точки зрения семантики это всё один заголовок,-->
-<!--            а визуальные составляющие делают через классы-->
-<!--            например -->
-<!--            <h1 class="heading">-->
-<!--                <span class="heading__general">Капустин</span>-->
-<!--                <span class="heading__sub">Андрей Геннадьевич</span>-->
-<!--            </h1>-->
-
-            <h1> Капустин</h1>
-            <h2> Андрей Геннадьевич </h2>
+        <div class="head">
+            <h1 class="fullname">
+                <span class="fullname__general">Капустин</span>
+                <span class="fullname__sub">Андрей Геннадьевич</span>
+            </h1>
             <div class="line"></div>
+        </div>
+        <div class="information">
             <div class="education">
-<!--                ОБРАЗОВАНИЕ - нет такого слова, это не аббривиатура, есть Образование. Это касается и слов ниже.-->
-<!--                То что ты сделал их заглавными буквами - вопрос стилизации, с точки зрения семантики является ошибкой.-->
-<!--                Для этого есть css text-transform: uppercase-->
-                <h3>ОБРАЗОВАНИЕ </h3>
-                <table>
+                <h2 class="subtitle">Образование </h2>
+                <table class="education__university">
                     <tr>
                         <td>2006-2011</td>
                         <td>Мордовский национальный исследовательский государственный университет им. Н.П. Огарева</td>
-                        <td>Факультет электронной техники, Автоматизированные системы обработки информации и управления</td>
+                        <td>Факультет электронной техники, Автоматизированные системы обработки информации и управления
+                        </td>
                     </tr>
                     <tr>
                         <td>2011-2015</td>
@@ -42,16 +38,11 @@
                     </tr>
                 </table>
             </div>
-            <div>
-                <h3>КУРСЫ ПОВЫШЕНИЯ КВАЛИФИКАЦИИ</h3>
-                <ul>
-<!--                    здесь кавычки “” такие-->
-                    <li>SimbirSoft “Основы QA” 2018 </li>
-
-<!--                    а здесь «» такие-->
-                    <li>Stepik.org «JavaScript для начинающих» 2022</li>
-
-<!--                    а здесь такие "", ты все собрал, в зависимости от языка будет выбор одних из всего набора-->
+            <div class="courses">
+                <h2 class="subtitle">Курсы повышения квалификации</h2>
+                <ul class="cocourses__list">
+                    <li>SimbirSoft "Основы QA" 2018 </li>
+                    <li>Stepik.org "JavaScript для начинающих" 2022</li>
                     <li>Некоммерческое Образовательное учреждение дополнительного профессионального образования "Учебный
                         центр безопасности информации "МАСКОМ" по курсу "Защита информации. Организационно-методические
                         основы проведения специальных обследований и проверок" Москва 2019 год.</li>
@@ -59,13 +50,14 @@
                         институт Министерства внутренних дел Российской Федерации" по дополнительной профессиональной
                         программе "Аттестация объектов информатизации по требованиям безопасности информации" Воронеж
                         2020 год</li>
-                    <li>Федеральное государственное казенное образовательное учреждение высшего образования «Московский
+                    <li>Федеральное государственное казенное образовательное учреждение высшего образования "Московский
                         университет Министерства внутренних дел Российской Федерации имени В.Я. Кикотя» по курсу
-                        профессиональной переподготовке «Информационная безопасность. Техническая защита
-                        конфиденциальной информации»</li>
+                        профессиональной переподготовке "Информационная безопасность. Техническая защита
+                        конфиденциальной информации"</li>
                     <li>Некоммерческое Образовательное учреждение дополнительного профессионального образования "Учебный
                         центр безопасности информации "МАСКОМ" по курсу "Специальные исследования. Оценка защищенности
-                        объектов информатизации от утечки информации по каналам ПЭМИН. Система СИГУРД" Москва 2022 год.</li>
+                        объектов информатизации от утечки информации по каналам ПЭМИН. Система СИГУРД" Москва 2022 год.
+                    </li>
                     <li>Некоммерческое Образовательное учреждение дополнительного профессионального образования "Учебный
                         центр безопасности информации "МАСКОМ" по курсу "Специальные исследования. Оценка защищенности
                         ВТСС от утечки речевой информации в канале, образованном низкочастотным акустоэлектрическим
@@ -73,13 +65,13 @@
                 </ul>
             </div>
             <div class="work">
-                <h3>ОПЫТ РАБОТЫ</h3>
-                <table>
+                <h2 class="subtitle">Опыт работы</h2>
+                <table class="work__experience">
                     <tr>
-                        <th>Период работы</th>
-                        <th>Организация</th>
-                        <th>Должность</th>
-                        <th>Обязанности на рабочем месте</th>
+                        <th class="work__experience__heading">Период работы</th>
+                        <th class="work__experience__heading">Организация</th>
+                        <th class="work__experience__heading">Должность</th>
+                        <th class="work__experience__heading">Обязанности на рабочем месте</th>
                     </tr>
                     <tr>
                         <td>Октябрь 2011 — Декабрь 2015</td>
@@ -107,10 +99,10 @@
                 </table>
             </div>
             <div>
-                <h3>НАВЫКИ И УМЕНИЯ</h3>
+                <h2 class="subtitle">Навыки и умения</h2>
                 <div class="skills">
                     <div class="skill">
-                        <h4>ЯЗЫКИ ПРОГРАММИРОВАНИЯ</h4>
+                        <h3 class="skill__title">Языки программирования</h3>
                         <ul>
                             <li> С++ – делал лабораторные работы</li>
                             <li> Java – делал лабораторные работы</li>
@@ -120,21 +112,20 @@
                             <li>Python - читал несколько статей, есть желание применить знания на практике </li>
                             <li>Visual Basic - делал лабораторные работ</li>
                         </ul>
-
                     </div>
                     <div class="skill">
-                        <h4>ФРЕЙМВОРКИ</h4>
+                        <h3 class="skill__title">Фреймворки</h3>
                         <ul>
                             <li>Angular -читал несколько статей</li>
                             <li>React - делал учебные проекты (курсовые, диплом, курсы в интернете)</li>
                         </ul>
-                        <h4>БАЗЫ ДАННЫХ</h4>
+                        <h3 class="skill__title">Базы данных</h3>
                         <ul>
                             <li>MySQL - делал прсотые запросы (select, join) </li>
                         </ul>
                     </div>
                     <div class="skill">
-                        <h4>ОПЕРАЦИОННЫЕ СИСТЕМЫ</h4>
+                        <h3 class="skill__title">Операционные системы</h3>
                         <ul>
                             <li>Windows</li>
                             <li>Unix/Linux/etc</li>
@@ -143,7 +134,7 @@
                         </ul>
                     </div>
                     <div class="skill">
-                        <h4>IDE</h4>
+                        <h3 class="skill__title">IDE</h3>
                         <ul>
                             <li>WebStorm</li>
                             <li>Visual Studio Code</li>
@@ -152,18 +143,24 @@
                 </div>
             </div>
         </div>
-        <div class="info">
-            <h3>Контактная информация</h3>
-            <ul>
-<!--                почему картинка называется yahoo? я могу понять, но лучше таких вещей в проектах не допускать, в данном случае это email.png -->
-<!--                ссылки на почту и на телефон можно сделать через href= mailto: и tel:-->
-
-                <li> <img src="yahoo.png" /> Pechen1214@yahoo.com </li>
-                <li> <img src="whatsapp.png" /> 89510571722 </li>
-                <li> <img src="skype.png" /> live:.cid.77c61aacdf9be483 </li>
-                <li> <img src="location.png" />  430000, Республика Мордовия, город Саранск, рабочий поселок Ялга, улица Октябрьская, дом 3, квартира 6.</li>
+        <div class="contacts">
+            <h2 class="subtitle">Контактная информация</h2>
+            <ul class="contacts__contact">
+                <li class="contacts__contact__item"> <a class="contacts__contact__link"
+                        href="mailto:pechen1214@yahoo.com"><i class="fa-solid fa-envelope"></i> Pechen1214@yahoo.com
+                    </a></li>
+                <li class="contacts__contact__item"> <a class="contacts__contact__link" href="tel:+79510571722"><i
+                            class="fa-solid fa-phone"></i> 89510571722 </a></li>
+                <li class="contacts__contact__item"> <a class="contacts__contact__link"
+                        href="https://join.skype.com/invite/EGuwc3vWyFdK"> <i class="fa-brands fa-skype"></i>
+                        live:.cid.77c61aacdf9be483 </a></li>
+                <li class="contacts__contact__item"> <a class="contacts__contact__link"
+                        href="https://yandex.ru/maps/-/CCUV4ZuWXD"><i class="fa-solid fa-location-dot"></i> 430000,
+                        Республика Мордовия, город Саранск, рабочий поселок Ялга, улица Октябрьская, дом 3, квартира
+                        6.</a></li>
             </ul>
         </div>
     </main>
 </body>
+
 </html>
